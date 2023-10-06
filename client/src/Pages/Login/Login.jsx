@@ -32,10 +32,13 @@ const Login = () => {
 
       if (username && password) {
         // submit form
-        const response = await axios.post("http://localhost:5000/users/login", {
-          username,
-          password,
-        });
+        const response = await axios.post(
+          "https://socio-app-xe9r.onrender.com/users/login",
+          {
+            username,
+            password,
+          },
+        );
         const { token, _id } = response.data;
 
         if (token) {
@@ -75,7 +78,7 @@ const Login = () => {
 
       if (username && password && email) {
         // submit form
-        await axios.post("http://localhost:5000/users/register", {
+        await axios.post("https://socio-app-xe9r.onrender.com/users/register", {
           username,
           email,
           password,
@@ -99,7 +102,7 @@ const Login = () => {
       }, 1000);
       return;
     } catch (error) {
-      setMsg("Details already exist!");
+      setMsg("Error signing up: Try again!");
       setErr(true);
 
       setTimeout(() => {

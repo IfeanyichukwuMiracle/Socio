@@ -19,7 +19,7 @@ const Profile = () => {
     async function getUser() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/users/${userId}`,
+          `https://socio-app-xe9r.onrender.com/users/${userId}`,
           {
             headers: {
               Authorization: window.localStorage.getItem("token"),
@@ -34,11 +34,14 @@ const Profile = () => {
 
     async function getPosts() {
       try {
-        const posts = await axios.get(`http://localhost:5000/posts/${userId}`, {
-          headers: {
-            Authorization: window.localStorage.getItem("token"),
+        const posts = await axios.get(
+          `https://socio-app-xe9r.onrender.com/posts/${userId}`,
+          {
+            headers: {
+              Authorization: window.localStorage.getItem("token"),
+            },
           },
-        });
+        );
 
         setPosts(posts.data);
       } catch (error) {
@@ -51,7 +54,7 @@ const Profile = () => {
     async function checkFollowing() {
       try {
         const follower = await axios.get(
-          `http://localhost:5000/follow/followers/${userId}`,
+          `https://socio-app-xe9r.onrender.com/follow/followers/${userId}`,
           { headers: { Authorization: window.localStorage.getItem("token") } },
         );
 
@@ -76,7 +79,7 @@ const Profile = () => {
     const getFollowers = async () => {
       try {
         const followers = await axios.get(
-          `http://localhost:5000/follow/followers/${userId}`,
+          `https://socio-app-xe9r.onrender.com/follow/followers/${userId}`,
           {
             headers: {
               Authorization: window.localStorage.getItem("token"),
@@ -91,7 +94,7 @@ const Profile = () => {
     const getFollowing = async () => {
       try {
         const following = await axios.get(
-          `http://localhost:5000/follow/following/${userId}`,
+          `https://socio-app-xe9r.onrender.com/follow/following/${userId}`,
           {
             headers: {
               Authorization: window.localStorage.getItem("token"),
@@ -146,7 +149,7 @@ const Profile = () => {
                         try {
                           if (isFollowing) {
                             await axios.delete(
-                              `http://localhost:5000/follow/${userId}/${window.localStorage.getItem(
+                              `https://socio-app-xe9r.onrender.com/follow/${userId}/${window.localStorage.getItem(
                                 "id",
                               )}`,
                               {
@@ -161,7 +164,7 @@ const Profile = () => {
                             return;
                           } else {
                             await axios.post(
-                              `http://localhost:5000/follow/${userId}`,
+                              `https://socio-app-xe9r.onrender.com/follow/${userId}`,
                               {
                                 follower: window.localStorage.getItem("id"),
                               },

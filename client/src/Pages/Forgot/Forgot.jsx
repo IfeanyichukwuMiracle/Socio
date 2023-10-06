@@ -20,9 +20,12 @@ const Forgot = () => {
             e.preventDefault();
             if (email) {
               try {
-                await axios.post(`http://localhost:5000/users/forgot`, {
-                  email,
-                });
+                await axios.post(
+                  `https://socio-app-xe9r.onrender.com/users/forgot`,
+                  {
+                    email,
+                  },
+                );
 
                 setEmail("");
                 setMsg("OTP Sent");

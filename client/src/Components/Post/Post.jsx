@@ -13,9 +13,12 @@ const Post = ({ body, image, id, date, to }) => {
   useEffect(() => {
     async function getUser() {
       try {
-        const response = await axios.get(`http://localhost:5000/users/${id}`, {
-          headers: { Authorization: window.localStorage.getItem("token") },
-        });
+        const response = await axios.get(
+          `https://socio-app-xe9r.onrender.com/users/${id}`,
+          {
+            headers: { Authorization: window.localStorage.getItem("token") },
+          },
+        );
         setUser(response.data);
         return;
       } catch (error) {
@@ -27,7 +30,7 @@ const Post = ({ body, image, id, date, to }) => {
     async function getComments() {
       try {
         const comments = await axios.get(
-          `http://localhost:5000/comment/${to}`,
+          `https://socio-app-xe9r.onrender.com/comment/${to}`,
           { headers: { Authorization: window.localStorage.getItem("token") } },
         );
 
@@ -133,7 +136,7 @@ const Post = ({ body, image, id, date, to }) => {
                   e.preventDefault();
                   try {
                     const user = await axios.get(
-                      `http://localhost:5000/users/${window.localStorage.getItem(
+                      `https://socio-app-xe9r.onrender.com/users/${window.localStorage.getItem(
                         "id",
                       )}`,
                       {
@@ -143,7 +146,7 @@ const Post = ({ body, image, id, date, to }) => {
                       },
                     );
                     await axios.post(
-                      `http://localhost:5000/comment/${to}`,
+                      `https://socio-app-xe9r.onrender.com/comment/${to}`,
                       {
                         from: window.localStorage.getItem("id"),
                         body: comment,
@@ -157,7 +160,7 @@ const Post = ({ body, image, id, date, to }) => {
                     );
 
                     const comments = await axios.get(
-                      `http://localhost:5000/comment/${to}`,
+                      `https://socio-app-xe9r.onrender.com/comment/${to}`,
                       {
                         headers: {
                           Authorization: window.localStorage.getItem("token"),

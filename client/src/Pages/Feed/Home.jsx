@@ -12,9 +12,12 @@ const Home = () => {
   useEffect(() => {
     const getAllPosts = async function () {
       try {
-        const response = await axios.get("http://localhost:5000/posts/", {
-          headers: { Authorization: window.localStorage.getItem("token") },
-        });
+        const response = await axios.get(
+          "https://socio-app-xe9r.onrender.com/posts/",
+          {
+            headers: { Authorization: window.localStorage.getItem("token") },
+          },
+        );
         setPosts(response.data);
       } catch (error) {
         console.log(error);

@@ -23,10 +23,13 @@ const Reset = () => {
       details.newPassword === verifyPwd
     ) {
       try {
-        await axios.post(`http://localhost:5000/users/reset/${userEmail}`, {
-          otp: details.otp,
-          newPassword: details.newPassword,
-        });
+        await axios.post(
+          `https://socio-app-xe9r.onrender.com/users/reset/${userEmail}`,
+          {
+            otp: details.otp,
+            newPassword: details.newPassword,
+          },
+        );
 
         navigate("/");
         return;

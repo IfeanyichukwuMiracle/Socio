@@ -18,7 +18,7 @@ const Edit = () => {
       setIsFetching(true);
       const formdata = new FormData(e.target);
       await axios.put(
-        `http://localhost:5000/users/profile/${userId}`,
+        `https://socio-app-xe9r.onrender.com/users/profile/${userId}`,
         formdata,
         {
           headers: {

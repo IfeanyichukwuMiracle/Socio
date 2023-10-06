@@ -19,9 +19,13 @@ const Post = () => {
 
     try {
       setIsFetching(true);
-      await axios.post(`http://localhost:5000/posts/${userId}`, formData, {
-        headers: { Authorization: window.localStorage.getItem("token") },
-      });
+      await axios.post(
+        `https://socio-app-xe9r.onrender.com/posts/${userId}`,
+        formData,
+        {
+          headers: { Authorization: window.localStorage.getItem("token") },
+        },
+      );
 
       setErr(true);
       setIsFetching(false);
