@@ -1,0 +1,55 @@
+header.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1.7rem;
+  border-bottom: 0.13rem solid #f8f8f8;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+
+header.banner h1 {
+  font-size: 1.9rem;
+  color: var(--blue);
+  font-family: var(--heading-font);
+  font-weight: 900;
+}
+
+header.banner div {
+  list-style: none;
+  display: flex;
+  font-weight: 500;
+}
+
+header.banner div span {
+  padding: 0.1rem 0.25rem;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease-in-out;
+}
+
+header.banner div span:hover {
+  background: var(--light-blue);
+  color: var(--blue);
+  cursor: pointer;
+}
+
+ul.hamburger-btn {
+  list-style: none;
+  position: fixed;
+  top: 3rem;
+  right: 1rem;
+  font-weight: 900;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 1px 1px 30px 5px #f8f8f8;
+}
+
+ul.hamburger-btn li {
+  padding: 0.2rem 0.6rem;
+  background: white;
+  margin: 0.2rem 0;
+  color: var(--dark-blue);
+  cursor: pointer;
+}

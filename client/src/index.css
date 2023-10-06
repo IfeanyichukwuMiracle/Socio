@@ -1,0 +1,38 @@
+:root {
+  --blue: #0066ff;
+  --white: whitesmoke;
+  --light-blue: #d2e4fff5;
+  --dark-blue: #005ce6;
+  --black: rgb(26, 26, 26);
+  --heading-font: "Nunito";
+  --body-font: "Nunito Sans", "Nunito";
+  --border-radius: 0.3rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+.logo {
+  font-family: var(--heading-font);
+}
+
+.btn {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--dark-blue);
+}

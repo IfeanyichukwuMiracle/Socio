@@ -1,0 +1,23 @@
+section.profile-content {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid #f8f8f8;
+  border-radius: 0.1rem;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+button.profile-btn {
+  padding: 0.2rem 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  section.profile-content {
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  section.profile-content {
+    width: 95%;
+  }
+}

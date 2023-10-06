@@ -1,0 +1,42 @@
+section.edit-form {
+  width: 100%;
+  /* background: red; */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+section.edit-form form {
+  background: white;
+  padding: 0.3rem;
+  border-radius: var(--border-radius);
+  width: 45%;
+  margin: 7rem auto;
+}
+
+section.edit-form form input {
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: #f8f8f8;
+  font-size: 0.9rem;
+}
+
+section.edit-form form button {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-family: var(--heading-font);
+}
+@media (max-width: 1000px) {
+  section.edit-form form {
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  section.edit-form form {
+    width: 98%;
+  }
+}

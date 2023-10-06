@@ -1,0 +1,49 @@
+section.post-form {
+  width: 100%;
+  /* background: red; */
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+section.post-form form {
+  width: 45%;
+  background: white;
+  border-radius: var(--border-radius);
+  margin: 0.5rem auto;
+  padding-bottom: 5rem;
+}
+
+section.post-form form textarea {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  padding: 0.6rem;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  background: #f8f8f8;
+  border: none;
+}
+
+section.post-form form button {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  margin-top: 1.7rem;
+  font-family: var(--heading-font);
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  section.post-form form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 500px) {
+  section.post-form form {
+    width: 99%;
+  }
+  section.post-form {
+    padding: 2rem;
+  }
+}

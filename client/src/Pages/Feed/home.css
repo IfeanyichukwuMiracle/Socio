@@ -1,0 +1,22 @@
+section.posts,
+h1#feed {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid #f8f8f8;
+  border-radius: var(--border-radius);
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  section.posts,
+  h1#feed {
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  section.posts,
+  h1#feed {
+    width: 95%;
+  }
+}

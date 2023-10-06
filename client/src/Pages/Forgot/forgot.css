@@ -1,0 +1,38 @@
+section.forgot {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+section.forgot form {
+  width: 50%;
+  margin: 10rem auto;
+}
+
+section.forgot form input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  border: none;
+  background: #f8f8f8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+section.forgot button {
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 900;
+  font-family: var(--heading-font);
+}
+
+@media (max-width: 960px) {
+  section.forgot form {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  section.forgot form {
+    width: 97%;
+  }
+}

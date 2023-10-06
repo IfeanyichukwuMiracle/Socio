@@ -1,0 +1,28 @@
+section.reset {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+section.reset form {
+  width: 50%;
+  margin: 9rem auto 1rem auto;
+}
+
+section.reset form input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  border-radius: 0.3rem;
+  border: none;
+  background: #f8f8f8;
+}
+
+section.reset form button {
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  font-family: var(--heading-font);
+}

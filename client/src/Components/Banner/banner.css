@@ -1,0 +1,14 @@
+header.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1.7rem;
+  border-bottom: 0.13rem solid #f8f8f8;
+}
+
+header.banner h1 {
+  font-size: 1.9rem;
+  color: var(--blue);
+  font-family: var(--heading-font);
+  font-weight: 900;
+}

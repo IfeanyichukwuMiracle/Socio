@@ -1,0 +1,58 @@
+section.post {
+  box-sizing: border-box;
+  border-bottom: 2px solid #f8f8f8;
+}
+
+section.post .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.6rem;
+}
+
+section.post .header h4 {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--blue);
+  font-family: var(--heading-font);
+}
+section.post .body p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  padding: 0.2rem 0.6rem;
+}
+
+section.post div.comment {
+  padding: 0.6rem 0 0 0;
+}
+
+section.post div.comment div.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+section.post div.comment div.comment-header:hover {
+  background: #f8f8f8;
+}
+
+#comment-input {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+#comment-input input[type="text"] {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  border: none;
+  background: #f8f8f8;
+}
+#comment-input button {
+  padding: 0.4rem;
+}
