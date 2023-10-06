@@ -10,6 +10,11 @@ header.banner {
   background: white;
 }
 
+@media (max-width: 500px) {
+  header.banner {
+    padding: 0.3rem;
+  }
+}
 header.banner h1 {
   font-size: 1.9rem;
   color: var(--blue);

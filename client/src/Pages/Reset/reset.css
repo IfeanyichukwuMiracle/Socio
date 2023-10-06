@@ -26,3 +26,16 @@ section.reset form button {
   font-weight: 900;
   font-family: var(--heading-font);
 }
+
+@media (max-width: 1000px) {
+  section.reset form {
+    width: 75%;
+    margin: 9rem auto 1rem auto;
+  }
+}
+@media (max-width: 500px) {
+  section.reset form {
+    width: 99%;
+    margin: 9rem auto 1rem auto;
+  }
+}

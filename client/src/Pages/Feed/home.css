@@ -17,6 +17,6 @@ h1#feed {
 @media (max-width: 500px) {
   section.posts,
   h1#feed {
-    width: 95%;
+    width: 99%;
   }
 }

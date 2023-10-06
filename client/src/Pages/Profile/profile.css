@@ -18,6 +18,6 @@ button.profile-btn {
 }
 @media (max-width: 500px) {
   section.profile-content {
-    width: 95%;
+    width: 99%;
   }
 }
