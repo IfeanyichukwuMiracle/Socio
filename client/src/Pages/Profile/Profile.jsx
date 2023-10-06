@@ -268,7 +268,7 @@ const Profile = () => {
               fontFamily: "var(--heading-font)",
             }}
           >
-            Your posts
+            {posts.length > 0 ? posts.length : 0} posts
           </h2>
           {posts[0] ? (
             posts
