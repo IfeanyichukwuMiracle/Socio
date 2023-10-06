@@ -40,9 +40,19 @@ section.form form button {
 
 @media (max-width: 500px) {
   section.form form {
-    width: 99%;
+    width: 97%;
   }
   section.form {
-    padding: 2rem 0.3rem 6rem 0.3rem;
+    padding: 2rem 0.5rem 6rem 0.5rem;
+  }
+  section.form form input {
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  section.form form button {
+    padding: 0.9rem;
+    margin-top: 1.7rem;
+    font-size: 1.05rem;
   }
 }

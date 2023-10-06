@@ -12,3 +12,9 @@ header.banner h1 {
   font-family: var(--heading-font);
   font-weight: 900;
 }
+
+@media (max-width: 500px) {
+  header.banner {
+    padding: 0.5rem;
+  }
+}
