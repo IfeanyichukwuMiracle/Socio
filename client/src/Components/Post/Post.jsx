@@ -57,7 +57,7 @@ const Post = ({ body, image, id, date, to }) => {
             {user.username || "--"}
           </h4>
         </Link>
-        <p style={{ fontSize: ".81rem", fontWeight: "800" }}>{date}</p>
+        <p style={{ fontSize: ".7rem", fontWeight: "800" }}>{date}</p>
       </div>
       <div className="body">
         <p className="text">{body}</p>
@@ -205,7 +205,7 @@ const Post = ({ body, image, id, date, to }) => {
                             {comment.username}
                           </h4>
                         </Link>
-                        <p style={{ fontSize: ".82rem" }}>
+                        <p style={{ fontSize: ".7rem" }}>
                           {comment.createdAt || `@date`}
                         </p>
                       </div>
