@@ -12,7 +12,7 @@ header.banner {
 
 @media (max-width: 500px) {
   header.banner {
-    padding: 0.3rem;
+    padding: 0.2rem;
   }
 }
 header.banner h1 {
