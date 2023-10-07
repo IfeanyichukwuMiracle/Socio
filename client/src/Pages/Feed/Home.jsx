@@ -8,7 +8,6 @@ import axios from "axios";
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const { userId } = useParams();
-  const [count, setCount] = 0;
 
   useEffect(() => {
     const getAllPosts = async function () {
@@ -26,13 +25,23 @@ const Home = () => {
     };
 
     getAllPosts();
-    let countInt = setInterval(() => setCount(count + 1), 10000);
 
-    return () => {
-      clearInterval(countInt);
-    };
+    setInterval(async function () {
+      try {
+        const response = await axios.get(
+          "https://socio-app-xe9r.onrender.com/posts/",
+          {
+            headers: { Authorization: window.localStorage.getItem("token") },
+          },
+        );
+        setPosts(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }, 2000);
+
     // console.log(posts);
-  }, [userId, count]);
+  }, [userId]);
   return (
     <>
       <Banner userId={userId} />
