@@ -8,6 +8,7 @@ import axios from "axios";
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const { userId } = useParams();
+  const [count, setCount] = 0;
 
   useEffect(() => {
     const getAllPosts = async function () {
@@ -25,8 +26,13 @@ const Home = () => {
     };
 
     getAllPosts();
+    let countInt = setInterval(() => setCount(count + 1), 10000);
+
+    return () => {
+      clearInterval(countInt);
+    };
     // console.log(posts);
-  }, [userId]);
+  }, [userId, count]);
   return (
     <>
       <Banner userId={userId} />
