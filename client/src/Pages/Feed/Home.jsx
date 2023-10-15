@@ -4,6 +4,7 @@ import "./home.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Loader } from "../../Components/Loader";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
@@ -77,7 +78,8 @@ const Home = () => {
             .reverse()
         ) : (
           <>
-            <h3 style={{ padding: ".6rem" }}>No posts!</h3>
+            {/* <h3 style={{ padding: ".6rem" }}>No posts!</h3> */}
+            <Loader color={`var(--blue)`} />
           </>
         )}
       </section>

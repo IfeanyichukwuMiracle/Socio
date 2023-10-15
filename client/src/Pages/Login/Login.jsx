@@ -3,12 +3,15 @@ import Banner from "../../Components/Banner/Banner";
 import "./login.css";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import { Loader } from "../../Components/Loader";
 
 const Login = () => {
   const [sign, setSign] = useState({ username: "", email: "", password: "" });
   const [login, setLogin] = useState({ username: "", password: "" });
   const [toggle, setToggle] = useState(true);
   const navigate = useNavigate();
+
+  const [posting, setPosting] = useState(false);
 
   const [msg, setMsg] = useState("");
   const [err, setErr] = useState(false);
@@ -32,6 +35,8 @@ const Login = () => {
 
       if (username && password) {
         // submit form
+
+        setPosting(true);
         const response = await axios.post(
           "https://socio-app-xe9r.onrender.com/users/login",
           {
@@ -44,6 +49,8 @@ const Login = () => {
         if (token) {
           window.localStorage.setItem("token", `${token}`);
           window.localStorage.setItem("id", `${_id}`);
+
+          setPosting(false);
           setMsg("Logged In!");
           setErr(true);
 
@@ -56,6 +63,7 @@ const Login = () => {
         }
       }
       setMsg("Enter full details!");
+      setPosting(false);
       setErr(true);
 
       setTimeout(() => {
@@ -63,6 +71,7 @@ const Login = () => {
       }, 1000);
     } catch (error) {
       setMsg("Wrong credentials!");
+      setPosting(false);
       setErr(true);
       setTimeout(() => {
         setErr(false);
@@ -78,12 +87,15 @@ const Login = () => {
 
       if (username && password && email) {
         // submit form
+
+        setPosting(true);
         await axios.post("https://socio-app-xe9r.onrender.com/users/register", {
           username,
           email,
           password,
         });
         setMsg("Signed up successfully!");
+        setPosting(false);
         setErr(true);
 
         setTimeout(() => {
@@ -95,6 +107,7 @@ const Login = () => {
       }
 
       setMsg("Enter full details!");
+      setPosting(false);
       setErr(true);
 
       setTimeout(() => {
@@ -103,6 +116,7 @@ const Login = () => {
       return;
     } catch (error) {
       setMsg("Error signing up: Try again!");
+      setPosting(false);
       setErr(true);
 
       setTimeout(() => {
@@ -170,7 +184,7 @@ const Login = () => {
               </span>
             </p>
             <button type="submit" className="btn">
-              Sign up
+              {posting ? <Loader color={`var(--light-blue)`} /> : `Sign up`}
             </button>
           </form>
 
@@ -259,7 +273,8 @@ const Login = () => {
               </Link>
             </p>
             <button type="submit" className="btn">
-              {toggle ? `Sign up` : `Login`}
+              {/* {toggle ? `Sign up` : `Login`} */}
+              {posting ? <Loader color={`var(--light-blue)`} /> : `Login`}
             </button>
           </form>
 
